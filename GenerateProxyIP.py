@@ -1,7 +1,5 @@
-from bs4 import BeautifulSoup as bs
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-import requests as rs
 import random as rnd
 
 
@@ -17,12 +15,14 @@ def getAllProxyIPs():
     #webpage where generated proxy IPs are taken from
     url = "https://free-proxy-list.net/"
 
+    CHROMEDRIVER_PATH = "selenium/chromedriver.exe"
+
     #making browser headless (no ui pops up)
     chromeOptions = Options()
     chromeOptions.headless = True
     
     #selenium driver for browser used
-    driver = webdriver.Chrome(options= chromeOptions)
+    driver = webdriver.Chrome(CHROMEDRIVER_PATH, options= chromeOptions)
 
     driver.get(url)
 
