@@ -35,7 +35,7 @@ def getAllProxyIPs():
 
     nextProxyIP_btn = driver.find_element_by_css_selector(nextBtn_cssSelector)
     
-    #while button is still 'clickable'
+    #while button is being clicked
     while not nextProxyIP_btn.click():
         
         #Since the element 'driver.find_element_by_css_selector(testcssSelector).text' does not exist until the 'next' button is disabled
